@@ -1,0 +1,160 @@
+[ERROR] - Cannot run bot...
+[ERROR] - Exception: Lifespan failure in startup. ''
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 311, in __call__
+    await self.app.startup()
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1775, in startup
+    await self.ensure_async(func)()
+  File "/root/bot/server.py", line 36, in startup
+    await client.start()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 170, in _start
+    value = phone()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 21, in <lambda>
+    phone: typing.Callable[[], str] = lambda: input('Please enter your phone (or bot token): '),
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/bot/server.py", line 162, in <module>
+    loop.run_until_complete(serve(app, hypercorn.Config()))
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/__init__.py", line 41, in serve
+    await worker_serve(app, config, shutdown_trigger=shutdown_trigger)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/run.py", line 85, in worker_serve
+    raise exception
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 32, in handle_lifespan
+    await invoke_asgi(self.app, scope, self.asgi_receive, self.asgi_send)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/utils.py", line 247, in invoke_asgi
+    await app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1741, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1767, in asgi_app
+    await asgi_handler(receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 313, in __call__
+    await send(
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 84, in asgi_send
+    raise LifespanFailureError("startup", message["message"])
+hypercorn.utils.LifespanFailureError: Lifespan failure in startup. ''
+[ERROR] - Cannot run bot...
+[ERROR] - Exception: Lifespan failure in startup. 'The used phone number has been banned from Telegram and cannot be used anymore. Maybe check https://www.telegram.org/faq_spam (caused by SendCodeRequest)'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 311, in __call__
+    await self.app.startup()
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1775, in startup
+    await self.ensure_async(func)()
+  File "/root/bot/server.py", line 36, in startup
+    await client.start()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 189, in _start
+    await self.send_code_request(phone, force_sms=force_sms)
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 514, in send_code_request
+    result = await self(functions.auth.SendCodeRequest(
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.PhoneNumberBannedError: The used phone number has been banned from Telegram and cannot be used anymore. Maybe check https://www.telegram.org/faq_spam (caused by SendCodeRequest)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/bot/server.py", line 162, in <module>
+    loop.run_until_complete(serve(app, hypercorn.Config()))
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/__init__.py", line 41, in serve
+    await worker_serve(app, config, shutdown_trigger=shutdown_trigger)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/run.py", line 85, in worker_serve
+    raise exception
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 32, in handle_lifespan
+    await invoke_asgi(self.app, scope, self.asgi_receive, self.asgi_send)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/utils.py", line 247, in invoke_asgi
+    await app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1741, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1767, in asgi_app
+    await asgi_handler(receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 313, in __call__
+    await send(
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 84, in asgi_send
+    raise LifespanFailureError("startup", message["message"])
+hypercorn.utils.LifespanFailureError: Lifespan failure in startup. 'The used phone number has been banned from Telegram and cannot be used anymore. Maybe check https://www.telegram.org/faq_spam (caused by SendCodeRequest)'
+[ERROR] - Cannot run bot...
+[ERROR] - Exception: Lifespan failure in startup. ''
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 311, in __call__
+    await self.app.startup()
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1775, in startup
+    await self.ensure_async(func)()
+  File "/root/bot/server.py", line 36, in startup
+    await client.start()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 170, in _start
+    value = phone()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 21, in <lambda>
+    phone: typing.Callable[[], str] = lambda: input('Please enter your phone (or bot token): '),
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/bot/server.py", line 162, in <module>
+    loop.run_until_complete(serve(app, hypercorn.Config()))
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/__init__.py", line 41, in serve
+    await worker_serve(app, config, shutdown_trigger=shutdown_trigger)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/run.py", line 85, in worker_serve
+    raise exception
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 32, in handle_lifespan
+    await invoke_asgi(self.app, scope, self.asgi_receive, self.asgi_send)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/utils.py", line 247, in invoke_asgi
+    await app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1741, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1767, in asgi_app
+    await asgi_handler(receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 313, in __call__
+    await send(
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 84, in asgi_send
+    raise LifespanFailureError("startup", message["message"])
+hypercorn.utils.LifespanFailureError: Lifespan failure in startup. ''
+[ERROR] - Cannot run bot...
+[ERROR] - Exception: Lifespan failure in startup. ''
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 311, in __call__
+    await self.app.startup()
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1775, in startup
+    await self.ensure_async(func)()
+  File "/root/bot/server.py", line 39, in startup
+    await client.start()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 170, in _start
+    value = phone()
+  File "/usr/local/lib/python3.9/dist-packages/telethon/client/auth.py", line 21, in <lambda>
+    phone: typing.Callable[[], str] = lambda: input('Please enter your phone (or bot token): '),
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/bot/server.py", line 194, in <module>
+    loop.run_until_complete(serve(app, hypercorn.Config()))
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/__init__.py", line 41, in serve
+    await worker_serve(app, config, shutdown_trigger=shutdown_trigger)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/run.py", line 85, in worker_serve
+    raise exception
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 32, in handle_lifespan
+    await invoke_asgi(self.app, scope, self.asgi_receive, self.asgi_send)
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/utils.py", line 247, in invoke_asgi
+    await app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1741, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/app.py", line 1767, in asgi_app
+    await asgi_handler(receive, send)
+  File "/usr/local/lib/python3.9/dist-packages/quart/asgi.py", line 313, in __call__
+    await send(
+  File "/usr/local/lib/python3.9/dist-packages/hypercorn/asyncio/lifespan.py", line 84, in asgi_send
+    raise LifespanFailureError("startup", message["message"])
+hypercorn.utils.LifespanFailureError: Lifespan failure in startup. ''

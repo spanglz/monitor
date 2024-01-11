@@ -1,0 +1,5 @@
+telethon
+hypercorn
+aiogram
+quart
+requests
